@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="@../css/auth.css"
+           fx:controller="com.canteen.controller.LoginController"
+           style="-fx-background-image: url('/images/bg.png');
+                  -fx-background-size: cover;
+                  -fx-background-position: center center;">
+
+    <VBox alignment="CENTER">
+
+        <VBox spacing="20" styleClass="auth-card">
+
+            <Label text="PSG iTech Canteen" styleClass="auth-title"/>
+
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+
+            <Label fx:id="errorLabel" styleClass="error-label"/>
+
+            <Button text="Login" onAction="#handleLogin" styleClass="auth-btn"/>
+
+            <Hyperlink text="Create an account" onAction="#goToSignup" styleClass="link"/>
+
+        </VBox>
+
+    </VBox>
+
+</StackPane>
